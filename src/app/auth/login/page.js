@@ -157,73 +157,38 @@ const Login = () => {
             </span>
           )}
           
-       
-          <div className="form-floating mb-3 mt-8 z-2">
-            {/* <input
-              type="email"
-              className="form-control formInput"
-              id="floatingInput"
-              placeholder="Email"
-              onChange={(e) =>
-                dispatch({
-                  type: "FIELD",
-                  fieldName: "email",
-                  payload: e.target.value,
-                })
-              }
-            /> */}
-
-        <div>
-            <input 
-            type="email" 
-            id="floatingInput"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-            placeholder="Email" 
-            required />
-        </div>
+          {/* form field starts */}
+          <div className="form-floating mb-3 mt-8 z-2 relative">
+            <div>
+              <input 
+                type="email" 
+                id="floatingInput"
+                className="bg-gray-50 py-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                placeholder="Email" 
+                required 
+              />
+            </div>
             {state?.emailError && (
               <span className="text-sm text-[#FF4D4D]">{state.emailError}</span>
             )}
           </div>
-        
-          
-          <div className="form-floating z-2">
-            {/* <input
-              type={showPassword ? "text" : "password"}
-              className="form-control formInput"
-              id="floatingPassword"
-              placeholder="Password"
-              onChange={(e) =>
-                dispatch({
-                  type: "FIELD",
-                  fieldName: "password",
-                  payload: e.target.value,
-                })
-              }
-            /> */}
 
-       <div>
-            <input 
-           type={showPassword ? "text" : "password"}
-           id="floatingPassword"
-             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-            placeholder="Password" 
-            required />
-        </div>
-          
+          <div className="form-floating z-2 relative">
+            <div>
+              <input 
+                type={showPassword ? "text" : "password"}
+                id="floatingPassword"
+                className="bg-gray-50 py-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                placeholder="Password" 
+                required 
+              />
+            </div>
             {state?.passwordError && (
               <span className="text-sm text-[#FF4D4D]">
                 {state.passwordError}
               </span>
             )}
-            <div
-              className={`absolute  top-50 ${
-                state?.passwordError
-                  ? "translate-y-[-100%]"
-                  : "translate-y-[-50%]"
-              } left-[90%]  right-0`}
-            >
-              {" "}
+            <div className="absolute top-1/2 transform -translate-y-1/2 right-2">
               {(showPassword && (
                 <AiOutlineEye
                   size="1.2em"
@@ -239,6 +204,14 @@ const Login = () => {
               )}
             </div>
           </div>
+
+
+          
+        {/* form field endss */}
+       
+          
+
+        
           <div className="flex items-end justify-end mt-2 z-2">
             <div
               className="cursor-pointer text-[#E31F1F] text-sm font-semibold text-end z-2"

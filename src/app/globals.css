@@ -104,21 +104,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-
-.inputField{
-  display: block; 
-padding: 0.625rem; 
-border-radius: 0.5rem; 
-border-width: 1px; 
-border-color: #D1D5DB; 
-width: 100%; 
-font-size: 0.875rem;
-line-height: 1.25rem; 
-color: #111827; 
-background-color: #F9FAFB; 
-
+input:focus {
+  border-color: blue; /* Change to the desired focus color */
+  outline: none; /* Remove the default focus outline */
 }
+
 
 @media (prefers-color-scheme: dark) {
   html {
